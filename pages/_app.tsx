@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
         <link
           rel="shortcut icon"
-          href="/assets/favicon.png"
+          href="./assets/favicon.png"
           type="image/x-icon"
         />
 
