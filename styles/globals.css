@@ -7,9 +7,28 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #fbfcfe !important;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
