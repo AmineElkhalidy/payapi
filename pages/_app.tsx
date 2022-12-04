@@ -5,6 +5,24 @@ import type { AppProps } from "next/app";
 // Head
 import Head from "next/head";
 
+// `ChakraProvider` component
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+
+// Custom colors
+const colors = {
+  main: "#ba4270",
+  second: "#fbfcfe",
+  dark: "#1b262f",
+  textColor: "#6c8294",
+  titleColor: "#36536b",
+};
+
+const fonts = {
+  main: "Poppins, sans-serif",
+};
+
+const theme = extendTheme({ colors, fonts });
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
@@ -24,7 +42,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>PayAPI - Landing page</title>
       </Head>
 
-      <Component {...pageProps} />
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
     </React.Fragment>
   );
 }
