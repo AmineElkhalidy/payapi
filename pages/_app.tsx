@@ -19,6 +19,9 @@ const colors = {
 
 const theme = extendTheme({ colors });
 
+// Layout
+import Layout from "../components/Layout/Layout";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <React.Fragment>
@@ -39,7 +42,9 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ChakraProvider>
     </React.Fragment>
   );
