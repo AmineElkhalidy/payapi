@@ -17,11 +17,7 @@ const colors = {
   titleColor: "#36536b",
 };
 
-const fonts = {
-  main: "Poppins, sans-serif",
-};
-
-const theme = extendTheme({ colors, fonts });
+const theme = extendTheme({ colors });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
